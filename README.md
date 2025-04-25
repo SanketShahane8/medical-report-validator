@@ -87,6 +87,14 @@ Example test data:
 }
 ```
 
+**Example cURL**
+```
+curl --location 'http://localhost:3000/api/validate' \
+--form 'tests="[{\"name\":\"Complete Blood Count\",\"description\":\"Basic blood test\",\"normalRange\":\"4.5-11.0 x 10^9/L\",\"unit\":\"x 10^9/L\"}]"' \
+--form 'report=@"/Users/sanketshahane/Downloads/CBC-sample-report-with-notes_0.pdf"' \
+--form 'model="deepseek-r1:32b"'
+```
+
 ## Error Handling
 
 The API returns appropriate error responses with the following structure:
